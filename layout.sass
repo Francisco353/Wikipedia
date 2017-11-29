@@ -1,0 +1,77 @@
+$blue: #80bfff
+body
+  background-color: $blue
+  #weather-box
+    color: white
+    margin-top: 15em
+    visibility: hidden
+  #temperature
+    min-width: 250px
+    font:
+      size: 8em
+    @media(max-width: 600px)
+      font-size: 5em
+    @media(max-width: 400px)
+      font-size: 3em
+  .fixed-bottom
+    color: white
+  .unit-button
+    color: white
+    background-color: $blue
+    padding: .2em 1em
+    font:
+      size: 1em
+      weight: 700
+    border: 2px solid white
+    border-radius: 1.5em
+    margin: 0 .5em
+    transition: all ease-in-out .5s
+    &:hover
+      background-color: white
+      border: 2px solid white
+      color: $blue
+      cursor: pointer
+  .activated
+    background-color: white      
+    border: 2px solid white
+    color: $blue
+  #weather-icon
+    font:
+      size: 8em
+    @media(max-width: 600px)
+      font-size: 5em
+    @media(max-width: 400px)
+      font-size: 3em
+    padding-top: .3em
+  .footer
+    padding-top: 20%
+    color: white
+    display: none
+  #summary
+    font:
+      size: 2em
+    padding-top: .3em
+  .loader
+    margin: auto
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    border: 16px solid #f3f3f3
+    border-radius: 50%
+    border-top: 16px solid #3498db
+    width: 120px
+    height: 120px
+    -webkit-animation: spin 2s linear infinite //Safari
+    animation: spin 2s linear infinite
+  =keyframes($name)
+    @-webkit-keyframes #{$name}
+      @content
+    @keyframes #{$name}
+      @content
+  +keyframes(spin) 
+    0%
+      transform: rotate(0deg) 
+    100%
+      transform: rotate(360deg) 
