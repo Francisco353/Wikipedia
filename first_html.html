@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wikipedia Searcher</title>
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="wikipedia-api-functionality.js"></script>
+    <link rel="stylesheet" href="layout.css">
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="text-center not-submitted" id="main-box">
+        <p>Random article</p>
+        <form id="wiki-input" class="closed">
+          <input autocomplete="off" id="word" type="text">
+          <div id="close-button" class="cross"></div>
+        </form>
+        <p id="inf" >Click icon to search</p>
+      </div>
+      <div id="results">
+        <ul id="list">
+        </ul>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
